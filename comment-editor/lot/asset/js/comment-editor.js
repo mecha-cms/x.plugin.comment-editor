@@ -1,20 +1,20 @@
-(function(win, doc, $) {
+(function($, win, doc) {
     var id = $.id,
         source = id && doc.getElementById(id), parent, edit;
     source = source && source.content;
     if (!source) return;
     parent = source.parentNode;
     edit = new RTE(source, $.RTE || {});
-    // force comment `type` to `HTML`
+    // Force comment `type` to `HTML`
     var input = doc.createElement('input');
     input.name = 'type';
     input.value = 'HTML';
     input.type = 'hidden';
     parent.appendChild(input);
-    // add hook to the `on.comment.reply` event
+    // Add hook to the `on.comment.reply` event
     function fn(e, anchor) {
         edit.view.focus();
         edit.view.setAttribute('placeholder', anchor.title || source.placeholder || "");
     }
     $.set('on.comment.reply', fn);
-})(window, document, window.COMMENT);
+})(window.COMMENT, window, document);

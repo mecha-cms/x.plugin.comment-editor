@@ -8,8 +8,8 @@
     // Force comment `type` to `HTML`
     var input = doc.createElement('input');
     input.name = 'type';
-    input.value = 'HTML';
     input.type = 'hidden';
+    input.value = 'HTML';
     parent.appendChild(input);
     // Add hook to the `on.comment.reply` event
     function fn(e, anchor) {

@@ -4,7 +4,11 @@ description: Rich text editor in comment form.
 author: Taufik Nurrohman
 type: Markdown
 version: 1.1.0
-dependency: {"extension":["comment","rich-text-editor"]}
+
+dependency:
+  extension:
+    - comment
+    - rich-text-editor
 ...
 
 This plugin will add a simple rich text editor in the comment form.

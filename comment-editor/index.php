@@ -1,7 +1,7 @@
 <?php
 
 Hook::set('route.enter', function() use($site) {
-    if ($site->is === 'page') {
+    if ($site->is('page')) {
         $s = EXTEND . DS . 'rich-text-editor' . DS . 'lot' . DS . 'asset' . DS;
         Asset::set($s . 'css' . DS . 'r-t-e.min.css', 10.1);
         Asset::set($s . 'js' . DS . 'r-t-e.min.js', 10.1);
@@ -13,4 +13,4 @@ Hook::set('route.enter', function() use($site) {
     }
 });
 
-Config::set('page.o.js.COMMENT.RTE', Plugin::state(__DIR__, 'RTE'));
+Config::set('page.o.js.COMMENT.RTE', Plugin::state('comment-editor', 'RTE'));

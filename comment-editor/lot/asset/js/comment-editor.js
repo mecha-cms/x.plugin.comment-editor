@@ -11,10 +11,4 @@
     input.type = 'hidden';
     input.value = 'HTML';
     parent.appendChild(input);
-    // Add hook to the `on.comment.reply` event
-    function fn(e, anchor) {
-        edit.view.focus();
-        edit.view.setAttribute('placeholder', anchor.title || source.placeholder || "");
-    }
-    $.set('on.comment.reply', fn);
 })(window.COMMENT, window, document);

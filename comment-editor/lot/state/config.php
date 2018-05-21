@@ -3,13 +3,13 @@
 return [
     'editor' => 'rich-text-editor',
     'editors' => [
-        'c-k-editor' => [], // TODO
+        'c-k-editor' => ['CKE' => []], // TODO
         'rich-text-editor' => [
             'RTE' => [
                 'tools' => ['b', 'i', 'a'],
                 'x' => false // disable source view
             ]
         ],
-        'text-editor' => [] // TODO
+        'text-editor' => ['TE' => []] // TODO
     ]
 ];
